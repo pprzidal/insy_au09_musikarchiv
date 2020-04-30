@@ -6,7 +6,7 @@ DROP DATABASE IF EXISTS musikarchiv2019;
 CREATE DATABASE musikarchiv2019;
 USE musikarchiv2019;
 
-DROP TABLE IF EXISTS interpret;
+-- DROP TABLE IF EXISTS interpret; eig. sollte man diesen Befehl nicht benötigen wenn man schon die ganze DB verwirft
 CREATE TABLE interpret (
        iname         VARCHAR(100),    -- z.B. 'Presley, Elvis'  aber: 'Pink Floyd'
        inameanz      VARCHAR(100),    -- z.B. 'Elvis Presley'         'Pink Floyd'
@@ -14,7 +14,36 @@ CREATE TABLE interpret (
        PRIMARY KEY (iname)
 ) ENGINE=INNODB;
 
-DROP TABLE IF EXISTS album;
+CREATE TABLE solist (
+  iname VARCHAR(100),
+  gebdatum DATE,
+  PRIMARY KEY (iname),
+  FOREIGN KEY (iname) REFERENCES interpret (iname)
+) ENGINE=INNODB;
+
+CREATE TABLE band (
+  iname VARCHAR(100),
+  gruendjahr DATE,
+  PRIMARY KEY (iname),
+  FOREIGN KEY (iname) REFERENCES interpret (iname)
+) ENGINE=INNODB;
+
+CREATE TABLE mitglied (
+  bisdatum DATE,
+  vondatum DATE,
+  siname VARCHAR(100),
+  biname VARCHAR(100),
+  PRIMARY KEY (vondatum, biname, siname),
+  FOREIGN KEY (siname) REFERENCES solist (iname),
+  FOREIGN KEY (biname) REFERENCES band (iname)
+) ENGINE=INNODB;
+
+CREATE TABLE genre (
+  bezeichnung VARCHAR (50),
+  PRIMARY KEY (bezeichnung)
+) ENGINE=INNODB;
+
+-- DROP TABLE IF EXISTS album; eig. sollte man diesen Befehl nicht benötigen wenn man schon die ganze DB verwirft
 CREATE TABLE album (
        aid     SMALLINT,              -- vierstellig xyyz
 									  -- x:  3AHIT-->1, 3BHIT-->2, 3CHIT--3, 3DHIT-->4, MARM-->5, 500 G.A.-->0001..0500
