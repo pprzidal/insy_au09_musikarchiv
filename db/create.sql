@@ -3,9 +3,9 @@
 -- Datum: 2019-03-11 V2.0 Vorbereitungsarbeiten erledigt
 -- Datum: 2020-04-30 Fertiggestellt von pprzidal
 
-DROP DATABASE IF EXISTS musikarchiv2019;
-CREATE DATABASE musikarchiv2019;
-USE musikarchiv2019;
+DROP DATABASE IF EXISTS musikarchiv2020;
+CREATE DATABASE musikarchiv2020;
+USE musikarchiv2020;
 
 -- DROP TABLE IF EXISTS interpret; eig. sollte man diesen Befehl nicht benötigen wenn man schon die ganze DB verwirft
 CREATE TABLE interpret (
