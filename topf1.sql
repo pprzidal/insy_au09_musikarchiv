@@ -110,7 +110,6 @@ INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus
 
 -- 144, Straight Outta Compton
 UPDATE interpret SET wikipedia = "https://de.wikipedia.org/wiki/N.W.A" WHERE iname = "N.W.A";
-INSERT INTO band (iname, gruendjahr) VALUES ("N.W.A", 1986);
 INSERT INTO genre (gbez) VALUES ("Hip Hop");
 INSERT INTO albumgenre (gbez, aid) VALUES ("Hip Hop", 144);
 UPDATE interpret SET wikipedia = "https://de.wikipedia.org/wiki/Dr._Dre" WHERE iname = "Dre, Dr. ";
@@ -263,7 +262,7 @@ INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus
 UPDATE interpret SET wikipedia = "https://en.wikipedia.org/wiki/Amy_Winehouse" WHERE iname = "Winehouse, Amy ";
 INSERT INTO solist (iname, gebdatum) VALUES ("Winehouse, Amy ", '1983-09-14');
 UPDATE album SET pjahr = 2006, discogs = "https://www.discogs.com/Amy-Winehouse-Back-To-Black/release/825438", atyp = "Studio" WHERE aid = 451;
-INSERT INTO albumgenre (gbez, aid) VALUES ();
+INSERT INTO albumgenre (gbez, aid) VALUES ("Pop", 451);
 
 INSERT INTO song (iname, stitel) VALUES ("Winehouse, Amy ", "Rehab");
 INSERT INTO song (iname, stitel) VALUES ("Winehouse, Amy ", "You Know I'm No Good");

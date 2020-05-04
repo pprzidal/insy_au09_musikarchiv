@@ -8,7 +8,7 @@ INSERT INTO interpret (iname, inameanz, wikipedia) VALUES ("Robinson", "Robinson
 INSERT INTO interpret (iname, inameanz, wikipedia) VALUES ("Waterloo & Robinson", "Waterloo & Robinson", "https://de.wikipedia.org/wiki/Waterloo_%26_Robinson");
 INSERT INTO solist (iname, gebdatum) VALUES ("Waterloo", '1945-11-27');
 INSERT INTO solist (iname, gebdatum) VALUES ("Robinson", '1947-04-15');
-INSERT INTO band (iname, gruendjahr) VALUES ("Waterloo & Robinson", '1970-01-01');
+INSERT INTO band (iname, gruendjahr) VALUES ("Waterloo & Robinson", 1970);
 INSERT INTO mitglied (siname, biname, vondatum, bisdatum) VALUES ("Waterloo", "Waterloo & Robinson", '1970-01-01', '2006-01-01');
 INSERT INTO mitglied (siname, biname, vondatum, bisdatum) VALUES ("Robinson", "Waterloo & Robinson", '1970-01-01', '2006-01-01');
 INSERT INTO album (aid, atitel, iname, discogs) VALUES (2171, "Weihnachten Mit Waterloo & Robinson", "Waterloo & Robinson", "https://www.discogs.com/de/Waterloo-Robinson-Weihnachten-Mit-Waterloo-Robinson/release/9509663");
@@ -74,7 +74,7 @@ INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus
 -- Wham!
 INSERT INTO interpret (iname, inameanz, wikipedia) VALUES ("Wham", "Wham", "https://en.wikipedia.org/wiki/Wham!");
 INSERT INTO interpret (iname, inameanz, wikipedia) VALUES ("Ridgeley, Andrew ", "Andrew Ridgeley", "https://en.wikipedia.org/wiki/Wham!");
-INSERT INTO band (iname, gruendjahr) VALUES ("Wham", '1981-01-01');
+INSERT INTO band (iname, gruendjahr) VALUES ("Wham", 1981);
 INSERT INTO solist (iname, gebdatum) VALUES ("Ridgeley, Andrew ", '1963-01-26');
 INSERT INTO solist (iname, gebdatum) VALUES ("Michael, George ", '1963-06-25');
 INSERT INTO mitglied (siname, biname, vondatum, bisdatum) VALUES ("Ridgeley, Andrew ", "Wham", '1981-01-01');

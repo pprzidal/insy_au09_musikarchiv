@@ -24,7 +24,7 @@ CREATE TABLE solist (
 
 CREATE TABLE band (
   iname VARCHAR(100),
-  gruendjahr DATE,
+  gruendjahr SMALLINT,
   PRIMARY KEY (iname),
   FOREIGN KEY (iname) REFERENCES interpret (iname)
 ) ENGINE=INNODB;
@@ -78,7 +78,7 @@ CREATE TABLE song (
 
 CREATE TABLE songv (
   sdauer TIME,
-  svers TINYINT,
+  svers VARCHAR(100),
   gbez VARCHAR (255),
   stitel VARCHAR (255),
   iname VARCHAR (255),
@@ -103,7 +103,7 @@ CREATE TABLE ttracklist (
   seite VARCHAR (255),
   iname VARCHAR (100),
   stitel VARCHAR (255),
-  svers TINYINT,
+  svers VARCHAR(100),
   PRIMARY KEY (aid, medium, seite, iname, stitel, svers),
   FOREIGN KEY (aid, medium, seite) REFERENCES tontr (aid, medium, seite),
   FOREIGN KEY (iname, stitel, svers) REFERENCES songv (iname, stitel, svers)
