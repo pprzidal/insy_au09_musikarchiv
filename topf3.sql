@@ -70,3 +70,45 @@ INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus
 INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2172, 'Vinyl', 'B', 'Carlos, Walter ', 'Ninth Symphony: Second Movement (Scherzo)', '', 4, false);
 INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2172, 'Vinyl', 'B', 'Carlos, Walter ', 'William Tell Overture (Abridged)', '', 5, false);
 INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2172, 'Vinyl', 'B', 'Carlos, Walter ', 'Country Lane', '', 6, false);
+
+-- Wham!
+INSERT INTO interpret (iname, inameanz, wikipedia) VALUES ("Wham", "Wham", "https://en.wikipedia.org/wiki/Wham!");
+INSERT INTO interpret (iname, inameanz, wikipedia) VALUES ("Ridgeley, Andrew ", "Andrew Ridgeley", "https://en.wikipedia.org/wiki/Wham!");
+INSERT INTO band (iname, gruendjahr) VALUES ("Wham", '1981-01-01');
+INSERT INTO solist (iname, gebdatum) VALUES ("Ridgeley, Andrew ", '1963-01-26');
+INSERT INTO solist (iname, gebdatum) VALUES ("Michael, George ", '1963-06-25');
+INSERT INTO mitglied (siname, biname, vondatum, bisdatum) VALUES ("Ridgeley, Andrew ", "Wham", '1981-01-01');
+INSERT INTO mitglied (siname, biname, vondatum, bisdatum) VALUES ("Michael, George ", "Wham", '1981-01-01');
+INSERT INTO album (aid, atitel, iname, discogs) VALUES (2173, "Make It Big", "Wham", "https://www.discogs.com/Wham-Make-It-Big/release/3439549");
+
+INSERT INTO albumgenre (gbez) VALUES ("Pop");
+
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Wake Me Up Before You Go-Go");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Everything She Wants");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Heartbeat");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Like A Baby");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Freedom");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "If You Were There");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Credit Card Baby");
+INSERT INTO song (iname, stitel) VALUES ("Wham", "Careless Whisper");
+
+-- INSERTs INTO Table: songv
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Wake Me Up Before You Go-Go', '', '00:03:50', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Everything She Wants', '', '00:05:01', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Heartbeat', '', '00:04:42', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Like A Baby', '', '00:04:12', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Freedom', '', '00:05:01', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'If You Were There', '', '00:03:38', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Credit Card Baby', '', '00:05:08', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Wham', 'Careless Whisper', '', '00:06:30', null);
+
+INSERT INTO tontr (aid, medium, seite) VALUES (2173, "CD", "1");
+-- INSERTs INTO Table: ttracklist
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Wake Me Up Before You Go-Go', '', 1, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Everything She Wants', '', 2, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Heartbeat', '', 3, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Like A Baby', '', 4, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Freedom', '', 5, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'If You Were There', '', 6, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Credit Card Baby', '', 7, false);
+INSERT INTO ttracklist (aid, medium, seite, iname, stitel, svers, tracknr, bonus) VALUES (2173, 'CD', '1', 'Wham', 'Careless Whisper', '', 8, false);

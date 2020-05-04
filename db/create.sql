@@ -46,19 +46,15 @@ CREATE TABLE genre (
 
 -- DROP TABLE IF EXISTS album; eig. sollte man diesen Befehl nicht benötigen wenn man schon die ganze DB verwirft
 CREATE TABLE album (
-       aid     SMALLINT,              -- vierstellig xyyz
-									  -- x:  3AHIT-->1, 3BHIT-->2, 3CHIT--3, 3DHIT-->4, MARM-->5, 500 G.A.-->0001..0500
-									  -- yy: Knr
-									  -- z:  0..9
-                    -- Man könnte das auch mit AUTO INCREMENT machen
+       aid     SMALLINT,
        atitel  VARCHAR(100),
-	   pjahr   SMALLINT      CHECK (pjahr > 1900 AND pjahr < 2100),
-	   atyp    VARCHAR(100),
+	     pjahr   SMALLINT      CHECK (pjahr > 1900 AND pjahr < 2100),
+	     atyp    VARCHAR(100),
        rang500 SMALLINT      UNIQUE,  -- NULL oder Rangliste aus '500 Greatest Albums'
-	   discogs VARCHAR(100),
-	   abem    VARCHAR(100),
+	     discogs VARCHAR(100),
+	     abem    VARCHAR(100),
        iname   VARCHAR(100),
-	   vorgaenger SMALLINT,
+	     vorgaenger SMALLINT,
        PRIMARY KEY (aid),
        FOREIGN KEY (iname)      REFERENCES interpret (iname) ON UPDATE CASCADE ON DELETE CASCADE,
        FOREIGN KEY (vorgaenger) REFERENCES album (aid)       ON UPDATE CASCADE ON DELETE SET NULL
@@ -77,7 +73,7 @@ CREATE TABLE song (
   stitel VARCHAR(255),
   iname VARCHAR(100),
   PRIMARY KEY (stitel, iname),
-  FOREIGN KEY (interpret) REFERENCES interpret (iname)
+  FOREIGN KEY (iname) REFERENCES interpret (iname)
 ) ENGINE=INNODB;
 
 CREATE TABLE songv (
@@ -109,7 +105,8 @@ CREATE TABLE ttracklist (
   stitel VARCHAR (255),
   svers TINYINT,
   PRIMARY KEY (aid, medium, seite, iname, stitel, svers),
-
+  FOREIGN KEY (aid, medium, seite) REFERENCES tontr (aid, medium, seite),
+  FOREIGN KEY (iname, stitel, svers) REFERENCES songv (iname, stitel, svers)
 ) ENGINE=INNODB;
 
 CREATE TABLE playl (
@@ -119,7 +116,14 @@ CREATE TABLE playl (
 ) ENGINE=INNODB;
 
 CREATE TABLE ptracklist (
-  tracknr
+  tracknr TINYINT,
+  pbez VARCHAR(255),
+  stitel VARCHAR(255),
+  svers TINYINT,
+  iname VARCHAR(100),
+  PRIMARY KEY (pbez, iname, stitel, svers),
+  FOREIGN KEY (pbez) REFERENCES playl (pbez),
+  FOREIGN KEY (iname, stitel, svers) REFERENCES songv (iname, stitel, svers)
 ) ENGINE=INNODB;
 
 -- 285 Interpreten aus '500 Greatest Albums'

@@ -5,7 +5,7 @@ USE musikarchiv2020;
 
 UPDATE interpret SET wikipedia = "https://de.wikipedia.org/wiki/Adele_(S%C3%A4ngerin)" WHERE iname = "Adele";
 INSERT INTO solist (iname, gebdatum) VALUES ("Adele", '1988-05-05');
-INSERT INTO album (aid, discogs, atitel, atyp, pjahr) VALUES (2170, "https://www.discogs.com/Adele-21/release/2664589?ev=rr",  "21", "Studio", 2011);
+INSERT INTO album (aid, discogs, atitel, atyp, pjahr) VALUES (2170, "https://www.discogs.com/Adele-21/release/2673188",  "21", "Studio", 2011);
 INSERT INTO albumgenre (gbez, aid) VALUES ("Pop", 2170);
 
 INSERT INTO song (iname, stitel) VALUES ("Adele", "Rolling In The Deep");
@@ -21,17 +21,17 @@ INSERT INTO song (iname, stitel) VALUES ("Adele", "Lovesong");
 INSERT INTO song (iname, stitel) VALUES ("Adele", "Someone Like You");
 
 -- INSERTs INTO Table: songv
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Rolling In The Deep', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Rumour Has It', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Turning Tables', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', "Don't You Remember", '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Set Fire To The Rain', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', "He Won't Go", '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Take It All', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', "I'll Be Waiting", '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'One And Only', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Lovesong', '', '00:0', null);
-INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Someone Like You', '', '00:0', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Rolling In The Deep', '', '00:03:49', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Rumour Has It', '', '00:03:43', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Turning Tables', '', '00:04:10', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', "Don't You Remember", '', '00:04:03', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Set Fire To The Rain', '', '00:04:01', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', "He Won't Go", '', '00:04:38', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Take It All', '', '00:03:48', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', "I'll Be Waiting", '', '00:04:01', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'One And Only', '', '00:05:48', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Lovesong', '', '00:05:16', null);
+INSERT INTO songv (iname, stitel, svers, sdauer, gbez) VALUES ('Adele', 'Someone Like You', '', '00:04:47', null);
 
 INSERT INTO tontr (aid, medium, seite) VALUES (2170, "Vinyl", "A");
 INSERT INTO tontr (aid, medium, seite) VALUES (2170, "Vinyl", "B");
