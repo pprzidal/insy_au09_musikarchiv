@@ -50,6 +50,7 @@ CREATE TABLE album (
 									  -- x:  3AHIT-->1, 3BHIT-->2, 3CHIT--3, 3DHIT-->4, MARM-->5, 500 G.A.-->0001..0500
 									  -- yy: Knr
 									  -- z:  0..9
+                    -- Man könnte das auch mit AUTO INCREMENT machen
        atitel  VARCHAR(100),
 	   pjahr   SMALLINT      CHECK (pjahr > 1900 AND pjahr < 2100),
 	   atyp    VARCHAR(100),
